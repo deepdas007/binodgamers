@@ -1,0 +1,92 @@
+{% extends 'game/index.html' %} {% load static %} {% block body_block%} <link
+rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
+<div class="banner-area"></div>
+
+<div class="container1">
+  <div class="wrapper1">
+    <div class="header">
+      <h1>Welcome To The Gaming Hub!</h1>
+    </div>
+    <div class="about">
+      <h2 data-aos="fade-right">About the site</h2>
+      <p data-aos="fade-left">
+        Welcome to your dream page this page is all about what you came here for
+        either it is to know about the games listed on this page or you want to
+        improve your aim, gameplay, gamesense, or you just want to get a step
+        ahead of everyone with Hacks whatever you want you can get from our
+        site. Our page will provide you with the best tutorial from player all
+        arounds the world. This page also provide you the updates of the game
+        you want and some tournaments details we will notify you with everything
+        as soon as possible stay tuned and don't forget to provide use with a
+        detailed feedback that would help us a lot.
+      </p>
+    </div>
+    <div class="gamesBanner">
+      <video width="100%" height="auto" autoplay="" loop="" muted="">
+        <source src="{% static 'game/img/banner.mp4'%}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+  <div class="wrapper2">
+    <div class="suggestedVideos">
+      <h2 data-aos="fade-down">Suggested Videos</h2>
+    </div>
+    <div class="videoWrapper">
+      <div class="video1" data-aos="fade-right">
+        <iframe
+          class="resp-iframe"
+          width="450"
+          height="250"
+          src="https://www.youtube.com/embed/UTHRxLqMjAs"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          data-aos="flip-left"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="text text1" data-aos="fade-left">
+        <h2><b>Best Clutch Moments 2020</b></h2>
+        <p><em>Some of the best clutches by CSGO pros in 2020.</em></p>
+      </div>
+
+      <div class="text text2" data-aos="fade-right">
+        <h2><b>Essential Beginner Smokes</b></h2>
+        <p><em>Must know smokes for every beginner in CSGO.</em></p>
+      </div>
+      <div class="video2" data-aos="fade-left">
+        <iframe
+          class="resp-iframe"
+          width="450"
+          height="250"
+          src="https://www.youtube.com/embed/Mu-wi-J3wn8"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          data-aos="flip-right"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="video3" data-aos="fade-right">
+        <iframe
+          class="resp-iframe"
+          width="450"
+          height="250"
+          src="https://www.youtube.com/embed/AGcgQEzCCrI"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          data-aos="flip-left"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="text text3" data-aos="fade-left">
+        <h2><b>Movement Guide for Beginners</b></h2>
+        <p>
+          <em>Every beginner should know the basics of movement in CSGO.</em>
+        </p>
+      </div>
+      <div class="filler"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
