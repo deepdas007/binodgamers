@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamers Fact</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Fonts Links -->
+    <link href={% static
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap' %}
+    rel="stylesheet" /> <link href={% static
+    'https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap' %}
+    rel="stylesheet" /> <link href={% static
+    'https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap' %}
+    rel="stylesheet" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href={% static
+    'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
+    %}
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous" /> 
+    
+    <link rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}> 
+    
+    <link rel="stylesheet" href={% static
+    'https://unpkg.com/aos@next/dist/aos.css' %} />
+
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/621ccc563f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky-header" style="display:flex;">
+      <div class="logo">
+        <a href="{% url 'home' %}" class="logo-link">
+          <img src="{% static 'game/img/logo2.png' %}" alt="LOGO" /><span>amers Fact</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <a href="#"
+            ><span
+              ><img src="{% static 'game/img/hotIcon.gif' %}" width="25px" height="25px" /></span
+            ><span class="blinking">Hacks</span></a
+          >
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    {% comment %} body {% endcomment %}
+    {% block body_block %}
+    {% endblock %}
+
+    {% comment %} footer {% endcomment %}
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <a href="#" class="footer-logo">GAMERS FACT</a>
+          <div class="social-icons">
+            <a href="#facebook"><i class="fab -fa-facebook-f"></i></a>
+            <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="copyright">
+            <p>&copy; 2020 | Created By <span>Gamers Fact</span></p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <div class="header">
+            <h2>Our Newsletter</h2>
+          </div>
+          <div class="customer-mail">
+            <p>Enter your email id to get our latest news updates</p>
+            <form action="" class="news-form">
+              <input type="email" class="news-email" placeholder="Email ID" />
+              <button formaction="#" type="submit" class="news-button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="{% static 'game/js/navbar.js' %}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2500,
+      });
+    </script>
+  </body>
+</html>
