@@ -1,5 +1,5 @@
-{% extends 'game/index.html' %} {% load static %} {% block body_block%}
-<link rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}> 
+{% extends 'game/index.html' %} {% load static %} {% block body_block%} <link
+rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
 <link
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -14,8 +14,30 @@
         Page Heading
         <small>Secondary Text</small>
       </h1>
+      {% for post in blogs %}
+      <div class="card mb-4">
+        <img
+          class="card-img-top"
+          src="http://placehold.it/750x300"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h2 class="card-title">{{ post.post_title }}</h2>
+          <p class="card-text">{{ post.post_para_1 }}</p>
+          <a href="#" style="text-decoration: none"
+            >Read More
+            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt=""
+          /></a>
+        </div>
+        <div class="card-footer text-muted">
+          {{ post.pub_date }} by
+          <a href="#">{{ post.post_by }}</a>
+        </div>
+      </div>
+      {% endfor %}
 
       <!-- Blog Post -->
+      {% comment %}
       <div class="card mb-4">
         <img
           class="card-img-top"
@@ -92,22 +114,38 @@
           <a href="#">Start Bootstrap</a>
         </div>
       </div>
+      {% endcomment %}
 
       <!-- Pagination -->
+      <span class="current">
+        Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}.
+      </span>
       <ul class="pagination justify-content-center mb-4">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" aria-label="Previous">
+        {% if blogs.has_previous %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="?page={{ blogs.previous_page_number }}"
+            aria-label="Previous"
+          >
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
+        {% endif %}
         <li class="page-item active"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
+        {% if blogs.has_next %}
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
+          <a
+            class="page-link"
+            href="?page={{ blogs.next_page_number }}"
+            aria-label="Next"
+          >
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
+        {% endif %}
       </ul>
     </div>
 
