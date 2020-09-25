@@ -2,12 +2,15 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 
 class blogPost(models.Model):
     post_title = models.CharField('Post title', max_length=200)
     post_by = models.CharField('Post by', max_length=200)
+    head_image = models.ImageField(upload_to='images/', blank=True)
     post_para_1 = models.CharField('Post paragraph 1', max_length=2000)
+    post_content = RichTextField(blank=True, null=True)
     post_para_2 = models.CharField(
         'Post paragraph 2', max_length=2000, blank=True)
     post_para_3 = models.CharField(

@@ -1,11 +1,7 @@
-{% extends 'game/index.html' %} {% load static %} {% block body_block%} <link
-rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
-<link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-  crossorigin="anonymous"
-/>
+{% extends 'game/index.html' %} {% load static %} {% block body_block%}
+<link rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 <div class="container">
   <div class="row">
     <!-- Blog Entries Column -->
@@ -16,18 +12,12 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
       </h1>
       {% for post in blogs %}
       <div class="card mb-4">
-        <img
-          class="card-img-top"
-          src="http://placehold.it/750x300"
-          alt="Card image cap"
-        />
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap" />
         <div class="card-body">
           <h2 class="card-title">{{ post.post_title }}</h2>
           <p class="card-text">{{ post.post_para_1 }}</p>
-          <a href="#" style="text-decoration: none"
-            >Read More
-            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt=""
-          /></a>
+          <a href="#" style="text-decoration: none">Read More
+            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt="" /></a>
         </div>
         <div class="card-footer text-muted">
           {{ post.pub_date }} by
@@ -39,11 +29,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
       <!-- Blog Post -->
       {% comment %}
       <div class="card mb-4">
-        <img
-          class="card-img-top"
-          src="http://placehold.it/750x300"
-          alt="Card image cap"
-        />
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap" />
         <div class="card-body">
           <h2 class="card-title">Post Title</h2>
           <p class="card-text">
@@ -52,10 +38,8 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
             expedita corporis animi vero voluptate voluptatibus possimus, veniam
             magni quis!
           </p>
-          <a href="#" style="text-decoration: none"
-            >Read More
-            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt=""
-          /></a>
+          <a href="#" style="text-decoration: none">Read More
+            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt="" /></a>
         </div>
         <div class="card-footer text-muted">
           Posted on January 1, 2020 by
@@ -65,11 +49,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
 
       <!-- Blog Post -->
       <div class="card mb-4">
-        <img
-          class="card-img-top"
-          src="http://placehold.it/750x300"
-          alt="Card image cap"
-        />
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap" />
         <div class="card-body">
           <h2 class="card-title">Post Title</h2>
           <p class="card-text">
@@ -78,10 +58,8 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
             expedita corporis animi vero voluptate voluptatibus possimus, veniam
             magni quis!
           </p>
-          <a href="#" style="text-decoration: none"
-            >Read More
-            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt=""
-          /></a>
+          <a href="#" style="text-decoration: none">Read More
+            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt="" /></a>
         </div>
         <div class="card-footer text-muted">
           Posted on January 1, 2020 by
@@ -91,11 +69,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
 
       <!-- Blog Post -->
       <div class="card mb-4">
-        <img
-          class="card-img-top"
-          src="http://placehold.it/750x300"
-          alt="Card image cap"
-        />
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap" />
         <div class="card-body">
           <h2 class="card-title">Post Title</h2>
           <p class="card-text">
@@ -104,10 +78,8 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
             expedita corporis animi vero voluptate voluptatibus possimus, veniam
             magni quis!
           </p>
-          <a href="#" style="text-decoration: none"
-            >Read More
-            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt=""
-          /></a>
+          <a href="#" style="text-decoration: none">Read More
+            <img src="{% static 'game/img/arrow.png' %}" width="20px" alt="" /></a>
         </div>
         <div class="card-footer text-muted">
           Posted on January 1, 2020 by
@@ -123,11 +95,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
       <ul class="pagination justify-content-center mb-4">
         {% if blogs.has_previous %}
         <li class="page-item">
-          <a
-            class="page-link"
-            href="?page={{ blogs.previous_page_number }}"
-            aria-label="Previous"
-          >
+          <a class="page-link" href="?page={{ blogs.previous_page_number }}" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
@@ -137,11 +105,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
         <li class="page-item"><a class="page-link" href="#">3</a></li>
         {% if blogs.has_next %}
         <li class="page-item">
-          <a
-            class="page-link"
-            href="?page={{ blogs.next_page_number }}"
-            aria-label="Next"
-          >
+          <a class="page-link" href="?page={{ blogs.next_page_number }}" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
@@ -156,11 +120,7 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
         <!-- <h5 class="">Search</h5> -->
         <div class="">
           <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search for..."
-            />
+            <input type="text" class="form-control" placeholder="Search for..." />
             <span class="input-group-append">
               <button class="btn btn-secondary search" type="button">
                 Search
@@ -219,9 +179,9 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
               </div>
               <div class="tw-text">
                 <div class="tw-meta">11.11.18 / in <a href="">Games</a></div>
-                <a href="#" class="trendText"
-                  ><h5>The best online game is out now!</h5></a
-                >
+                <a href="#" class="trendText">
+                  <h5>The best online game is out now!</h5>
+                </a>
               </div>
             </div>
           </div>
@@ -234,9 +194,9 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
               </div>
               <div class="tw-text">
                 <div class="tw-meta">11.11.18 / in <a href="">Games</a></div>
-                <a href="#" class="trendText"
-                  ><h5>The best online game is out now!</h5></a
-                >
+                <a href="#" class="trendText">
+                  <h5>The best online game is out now!</h5>
+                </a>
               </div>
             </div>
           </div>
@@ -249,9 +209,9 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
               </div>
               <div class="tw-text">
                 <div class="tw-meta">11.11.18 / in <a href="">Games</a></div>
-                <a href="#" class="trendText"
-                  ><h5>The best online game is out now!</h5></a
-                >
+                <a href="#" class="trendText">
+                  <h5>The best online game is out now!</h5>
+                </a>
               </div>
             </div>
           </div>
@@ -264,9 +224,9 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
               </div>
               <div class="tw-text">
                 <div class="tw-meta">11.11.18 / in <a href="">Games</a></div>
-                <a href="#" class="trendText"
-                  ><h5>The best online game is out now!</h5></a
-                >
+                <a href="#" class="trendText">
+                  <h5>The best online game is out now!</h5>
+                </a>
               </div>
             </div>
           </div>
@@ -279,9 +239,9 @@ rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
               </div>
               <div class="tw-text">
                 <div class="tw-meta">11.11.18 / in <a href="">Games</a></div>
-                <a href="#" class="trendText"
-                  ><h5>The best online game is out now!</h5></a
-                >
+                <a href="#" class="trendText">
+                  <h5>The best online game is out now!</h5>
+                </a>
               </div>
             </div>
           </div>
