@@ -1,15 +1,15 @@
 from django.contrib import admin
 
-from .models import blogPost
+from .models import blogpost
 
-admin.site.register(blogPost)
+admin.site.register(blogpost)
 
 # class ChoiceInline(admin.TabularInline):  # StackedInline, TabularInline
 #     model = Choice
 #     extra = 3
 
 
-# class blogPostAdmin(admin.ModelAdmin):
+# class blogpostAdmin(admin.ModelAdmin):
 #     # fields = ['pub_date', 'question_text']
 #     fieldsets = [
 #         (None,               {'fields': ['post_title']}),
@@ -26,4 +26,4 @@ admin.site.register(blogPost)
 #     search_fields = ['post_title']
 
 
-# admin.site.register(blogPost, blogPostAdmin)
+# admin.site.register(blogpost, blogpostAdmin)

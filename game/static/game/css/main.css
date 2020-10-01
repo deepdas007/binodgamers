@@ -44,9 +44,7 @@ nav {
   color: white;
 }
 
-dl,
-ol,
-ul {
+dl, ol, ul {
   margin-bottom: 0;
 }
 
@@ -388,8 +386,7 @@ iframe {
   margin-bottom: 35px;
 }
 
-.video1 iframe,
-.video3 iframe {
+.video1 iframe, .video3 iframe {
   padding-right: 40px;
 }
 
@@ -479,6 +476,7 @@ footer {
   height: 260px;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  margin-top: 3rem;
 }
 
 h2 {
@@ -548,8 +546,7 @@ h2 {
   right: 15%;
 }
 
-.footer-container .footer-right .header,
-.footer-container .footer-right .customer-mail p {
+.footer-container .footer-right .header, .footer-container .footer-right .customer-mail p {
   color: white;
 }
 
