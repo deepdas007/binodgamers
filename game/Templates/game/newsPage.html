@@ -1,11 +1,45 @@
-{% extends 'game/index.html' %} {% load static %} {% block body_block%}
-<link rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+{% extends 'game/index.html' %} {% load static %} {% block body_block%} <link
+rel="stylesheet" type="text/css" href={% static 'game/css/main.css' %}>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+  crossorigin="anonymous"
+/>
 <div class="container">
   <div class="row">
     <!-- Post Content Column -->
     <div class="col-lg-8">
+      <!-- Title -->
+      <h1 class="mt-4">{{ blog.post_title }}</h1>
+
+      <!-- Author -->
+      <p class="lead">
+        by
+        <a href="#">{{ blog.post_by }}</a>
+      </p>
+
+      <hr />
+
+      <!-- Date/Time -->
+      <p>{{ blog.pub_date }}</p>
+
+      <hr />
+
+      <!-- Preview Image -->
+      <a href="../media/{{ blog.head_image }}">
+        <img
+          class="img-fluid rounded"
+          src="../media/{{ blog.head_image }}"
+          alt=""
+        />
+      </a>
+      <hr />
+
+      <!-- Post Content -->
+      <div>{{ blog.post_content|safe }}</div>
+
+      {% comment %}
       <!-- Title -->
       <h1 class="mt-4">Post Title</h1>
 
@@ -23,7 +57,11 @@
       <hr />
 
       <!-- Preview Image -->
-      <img class="img-fluid rounded" src="{% static 'game/img/post1.jpg' %}" alt="" />
+      <img
+        class="img-fluid rounded"
+        src="{% static 'game/img/post1.jpg' %}"
+        alt=""
+      />
 
       <hr />
 
@@ -71,6 +109,7 @@
         voluptates cupiditate voluptas illo saepe quaerat numquam recusandae?
         Qui, necessitatibus, est!
       </p>
+      {% endcomment %}
 
       <hr />
 
@@ -89,7 +128,11 @@
 
       <!-- Single Comment -->
       <div class="media mb-4">
-        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
+        <img
+          class="d-flex mr-3 rounded-circle"
+          src="http://placehold.it/50x50"
+          alt=""
+        />
         <div class="media-body">
           <h5 class="mt-0">Commenter Name</h5>
           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
@@ -101,7 +144,11 @@
 
       <!-- Comment with nested comments -->
       <div class="media mb-4">
-        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
+        <img
+          class="d-flex mr-3 rounded-circle"
+          src="http://placehold.it/50x50"
+          alt=""
+        />
         <div class="media-body">
           <h5 class="mt-0">Commenter Name</h5>
           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
@@ -110,7 +157,11 @@
           vulputate fringilla. Donec lacinia congue felis in faucibus.
 
           <div class="media mt-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
+            <img
+              class="d-flex mr-3 rounded-circle"
+              src="http://placehold.it/50x50"
+              alt=""
+            />
             <div class="media-body">
               <h5 class="mt-0">Commenter Name</h5>
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
@@ -121,7 +172,11 @@
           </div>
 
           <div class="media mt-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="" />
+            <img
+              class="d-flex mr-3 rounded-circle"
+              src="http://placehold.it/50x50"
+              alt=""
+            />
             <div class="media-body">
               <h5 class="mt-0">Commenter Name</h5>
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
@@ -141,7 +196,11 @@
         <!-- <h5 class="">Search</h5> -->
         <div class="">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for..." />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search for..."
+            />
             <span class="input-group-append">
               <button class="btn btn-secondary search" type="button">
                 Search
